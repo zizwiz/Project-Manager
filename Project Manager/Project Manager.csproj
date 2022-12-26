@@ -66,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="set up\button_setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="popups\ColumnName.resx">
       <DependentUpon>ColumnName.cs</DependentUpon>
     </EmbeddedResource>

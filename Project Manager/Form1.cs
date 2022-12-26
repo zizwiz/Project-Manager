@@ -13,6 +13,8 @@ namespace Project_Manager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            grpbx_data_tab.Visible = false;
+
             Text += " : v" + Assembly.GetExecutingAssembly().GetName().Version; // put in the version number
         }
 
@@ -20,5 +22,7 @@ namespace Project_Manager
         {
             Close();
         }
+
+       
     }
 }

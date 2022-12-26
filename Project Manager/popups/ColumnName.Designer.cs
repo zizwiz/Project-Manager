@@ -33,6 +33,7 @@ namespace Project_Manager
             this.btn_column_name = new System.Windows.Forms.Button();
             this.txtbx_column_name = new System.Windows.Forms.TextBox();
             this.lbl_column_name = new System.Windows.Forms.Label();
+            this.btn_popup_use_date = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_column_name
@@ -61,11 +62,22 @@ namespace Project_Manager
             this.lbl_column_name.TabIndex = 2;
             this.lbl_column_name.Text = "What name will the column have:";
             // 
+            // btn_popup_use_date
+            // 
+            this.btn_popup_use_date.Location = new System.Drawing.Point(16, 179);
+            this.btn_popup_use_date.Name = "btn_popup_use_date";
+            this.btn_popup_use_date.Size = new System.Drawing.Size(118, 50);
+            this.btn_popup_use_date.TabIndex = 3;
+            this.btn_popup_use_date.Text = "Use Date";
+            this.btn_popup_use_date.UseVisualStyleBackColor = true;
+            this.btn_popup_use_date.Click += new System.EventHandler(this.btn_popup_use_date_Click);
+            // 
             // ColumnName
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 241);
+            this.Controls.Add(this.btn_popup_use_date);
             this.Controls.Add(this.lbl_column_name);
             this.Controls.Add(this.txtbx_column_name);
             this.Controls.Add(this.btn_column_name);
@@ -86,5 +98,6 @@ namespace Project_Manager
         private System.Windows.Forms.Button btn_column_name;
         private System.Windows.Forms.TextBox txtbx_column_name;
         private System.Windows.Forms.Label lbl_column_name;
+        private System.Windows.Forms.Button btn_popup_use_date;
     }
 }

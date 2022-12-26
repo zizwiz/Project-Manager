@@ -25,6 +25,10 @@ namespace Project_Manager
         {
             Close();
         }
-        
+
+        private void btn_popup_use_date_Click(object sender, EventArgs e)
+        {
+            txtbx_column_name.Text = DateTime.Now.ToShortDateString();
+        }
     }
 }

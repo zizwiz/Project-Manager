@@ -28,35 +28,42 @@ namespace Project_Manager
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
-                // Get the data.
-                string[,] values = LoadCsv(openFileDialog1.FileName);
-                int num_rows = values.GetUpperBound(0) + 1;
-                int num_cols = values.GetUpperBound(1) + 1;
-
-                // Display the data to show we have it.
-
-                // Make column headers.
-                // For this example, we assume the first row
-                // contains the column names.
-                dgv_csv_data.Columns.Clear();
-                for (int c = 0; c < num_cols; c++)
-                    dgv_csv_data.Columns.Add(values[0, c], values[0, c]);
-
-                // Add the data.
-                for (int r = 1; r < num_rows; r++)
+                try
                 {
-                    dgv_csv_data.Rows.Add();
-                    for (int c = 0; c < num_cols; c++)
-                    {
-                        dgv_csv_data.Rows[r - 1].Cells[c].Value = values[r, c];
-                    }
-                }
+                    // Get the data.
+                    string[,] values = LoadCsv(openFileDialog1.FileName);
+                    int num_rows = values.GetUpperBound(0) + 1;
+                    int num_cols = values.GetUpperBound(1) + 1;
 
-                //// Make the columns autosize.
-                foreach (DataGridViewColumn col in dgv_csv_data.Columns)
-                    //col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    // Display the data to show we have it.
+
+                    // Make column headers.
+                    // For this example, we assume the first row
+                    // contains the column names.
+                    dgv_csv_data.Columns.Clear();
+                    for (int c = 0; c < num_cols; c++)
+                        dgv_csv_data.Columns.Add(values[0, c], values[0, c]);
+
+                    // Add the data.
+                    for (int r = 1; r < num_rows; r++)
+                    {
+                        dgv_csv_data.Rows.Add();
+                        for (int c = 0; c < num_cols; c++)
+                        {
+                            dgv_csv_data.Rows[r - 1].Cells[c].Value = values[r, c];
+                        }
+                    }
+
+                    //// Make the columns autosize.
+                    foreach (DataGridViewColumn col in dgv_csv_data.Columns)
+                        //col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                        col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception);
+                    throw;
+                }
             }
 
 
@@ -72,21 +79,30 @@ namespace Project_Manager
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                var sb = new StringBuilder();
-
-                var headers = dgv_csv_data.Columns.Cast<DataGridViewColumn>();
-                sb.AppendLine(string.Join(",", headers.Select(column => column.HeaderText).ToArray()));
-
-                foreach (DataGridViewRow row in dgv_csv_data.Rows)
+                try
                 {
-                    var cells = row.Cells.Cast<DataGridViewCell>();
-                    sb.AppendLine(string.Join(",", cells.Select(cell => cell.Value).ToArray()));
+                    var sb = new StringBuilder();
+
+                    var headers = dgv_csv_data.Columns.Cast<DataGridViewColumn>();
+                    sb.AppendLine(string.Join(",", headers.Select(column => column.HeaderText).ToArray()));
+
+                    foreach (DataGridViewRow row in dgv_csv_data.Rows)
+                    {
+                        var cells = row.Cells.Cast<DataGridViewCell>();
+                        sb.AppendLine(string.Join(",", cells.Select(cell => cell.Value).ToArray()));
+                    }
+
+                    StreamWriter file = new StreamWriter(saveFileDialog1.FileName);
+
+                    file.WriteLine(sb.ToString()); // "sb" is the StringBuilder
+                    file.Close();
+
                 }
-
-                StreamWriter file = new StreamWriter(saveFileDialog1.FileName);
-
-                file.WriteLine(sb.ToString()); // "sb" is the StringBuilder
-                file.Close();
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception);
+                    throw;
+                }
             }
         }
 

@@ -32,6 +32,7 @@ namespace Project_Manager
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.grpbx_data_tab = new System.Windows.Forms.GroupBox();
             this.btn_add_csv_column = new System.Windows.Forms.Button();
             this.btn_add_csv_row = new System.Windows.Forms.Button();
             this.btn_write_csv_file = new System.Windows.Forms.Button();
@@ -45,12 +46,19 @@ namespace Project_Manager
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.grpbx_data_tab.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tab_data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_csv_data)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -70,21 +78,29 @@ namespace Project_Manager
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btn_add_csv_column);
-            this.panel1.Controls.Add(this.btn_add_csv_row);
-            this.panel1.Controls.Add(this.btn_write_csv_file);
-            this.panel1.Controls.Add(this.btn_open_csv);
-            this.panel1.Controls.Add(this.btn_exit);
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(144, 796);
             this.panel1.TabIndex = 0;
             // 
+            // grpbx_data_tab
+            // 
+            this.grpbx_data_tab.Controls.Add(this.btn_add_csv_column);
+            this.grpbx_data_tab.Controls.Add(this.btn_add_csv_row);
+            this.grpbx_data_tab.Controls.Add(this.btn_write_csv_file);
+            this.grpbx_data_tab.Controls.Add(this.btn_open_csv);
+            this.grpbx_data_tab.Location = new System.Drawing.Point(1, 48);
+            this.grpbx_data_tab.Name = "grpbx_data_tab";
+            this.grpbx_data_tab.Size = new System.Drawing.Size(137, 201);
+            this.grpbx_data_tab.TabIndex = 11;
+            this.grpbx_data_tab.TabStop = false;
+            // 
             // btn_add_csv_column
             // 
             this.btn_add_csv_column.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_add_csv_column.Location = new System.Drawing.Point(13, 96);
+            this.btn_add_csv_column.Location = new System.Drawing.Point(7, 59);
             this.btn_add_csv_column.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_add_csv_column.Name = "btn_add_csv_column";
             this.btn_add_csv_column.Size = new System.Drawing.Size(112, 35);
@@ -96,7 +112,7 @@ namespace Project_Manager
             // btn_add_csv_row
             // 
             this.btn_add_csv_row.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_add_csv_row.Location = new System.Drawing.Point(13, 141);
+            this.btn_add_csv_row.Location = new System.Drawing.Point(7, 104);
             this.btn_add_csv_row.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_add_csv_row.Name = "btn_add_csv_row";
             this.btn_add_csv_row.Size = new System.Drawing.Size(112, 35);
@@ -108,7 +124,7 @@ namespace Project_Manager
             // btn_write_csv_file
             // 
             this.btn_write_csv_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_write_csv_file.Location = new System.Drawing.Point(14, 186);
+            this.btn_write_csv_file.Location = new System.Drawing.Point(8, 149);
             this.btn_write_csv_file.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_write_csv_file.Name = "btn_write_csv_file";
             this.btn_write_csv_file.Size = new System.Drawing.Size(112, 35);
@@ -120,7 +136,7 @@ namespace Project_Manager
             // btn_open_csv
             // 
             this.btn_open_csv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_open_csv.Location = new System.Drawing.Point(14, 51);
+            this.btn_open_csv.Location = new System.Drawing.Point(8, 14);
             this.btn_open_csv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_open_csv.Name = "btn_open_csv";
             this.btn_open_csv.Size = new System.Drawing.Size(112, 35);
@@ -131,7 +147,7 @@ namespace Project_Manager
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(9, 748);
+            this.btn_exit.Location = new System.Drawing.Point(13, 8);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(112, 39);
             this.btn_exit.TabIndex = 0;
@@ -161,6 +177,7 @@ namespace Project_Manager
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(966, 796);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -224,6 +241,39 @@ namespace Project_Manager
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(144, 796);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.grpbx_data_tab);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(138, 730);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btn_exit);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 739);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(138, 54);
+            this.panel4.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -236,10 +286,14 @@ namespace Project_Manager
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.grpbx_data_tab.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tab_data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_csv_data)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -261,6 +315,10 @@ namespace Project_Manager
         private System.Windows.Forms.Button btn_add_csv_row;
         private System.Windows.Forms.Button btn_write_csv_file;
         private System.Windows.Forms.Button btn_open_csv;
+        private System.Windows.Forms.GroupBox grpbx_data_tab;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 
