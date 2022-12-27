@@ -17,17 +17,8 @@ namespace Project_Manager
 
             Text += " : v" + Assembly.GetExecutingAssembly().GetName().Version; // put in the version number
 
-            try
-            {
-                FillUpdateComboBoxes(); //fill names and ID's
-            }
-            catch (Exception exc)
-            {
-                //There are no names or IDs to fill.
-                MessageBox.Show("Something is wrong Grommit");
-            }
-
-            }
+            HideTabs();
+        }
 
         private void btn_exit_Click(object sender, EventArgs e)
         {

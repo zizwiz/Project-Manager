@@ -46,6 +46,7 @@ namespace Project_Manager
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_update = new System.Windows.Forms.TabPage();
+            this.lbl_update_file_in_use = new System.Windows.Forms.Label();
             this.cmbobx_update_id = new System.Windows.Forms.ComboBox();
             this.lbl_Update_ID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -65,7 +66,7 @@ namespace Project_Manager
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.lbl_update_file_in_use = new System.Windows.Forms.Label();
+            this.grpbx_update_tab = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -77,6 +78,7 @@ namespace Project_Manager
             this.tab_update.SuspendLayout();
             this.tab_data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_csv_data)).BeginInit();
+            this.grpbx_update_tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -120,8 +122,7 @@ namespace Project_Manager
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btn_update_add_data);
-            this.panel3.Controls.Add(this.btn_update_add_person);
+            this.panel3.Controls.Add(this.grpbx_update_tab);
             this.panel3.Controls.Add(this.grpbx_data_tab);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
@@ -131,7 +132,7 @@ namespace Project_Manager
             // 
             // btn_update_add_data
             // 
-            this.btn_update_add_data.Location = new System.Drawing.Point(13, 334);
+            this.btn_update_add_data.Location = new System.Drawing.Point(7, 58);
             this.btn_update_add_data.Name = "btn_update_add_data";
             this.btn_update_add_data.Size = new System.Drawing.Size(112, 35);
             this.btn_update_add_data.TabIndex = 17;
@@ -141,7 +142,7 @@ namespace Project_Manager
             // 
             // btn_update_add_person
             // 
-            this.btn_update_add_person.Location = new System.Drawing.Point(13, 293);
+            this.btn_update_add_person.Location = new System.Drawing.Point(7, 17);
             this.btn_update_add_person.Name = "btn_update_add_person";
             this.btn_update_add_person.Size = new System.Drawing.Size(112, 35);
             this.btn_update_add_person.TabIndex = 16;
@@ -276,6 +277,15 @@ namespace Project_Manager
             this.tab_update.TabIndex = 0;
             this.tab_update.Text = "Update";
             this.tab_update.UseVisualStyleBackColor = true;
+            // 
+            // lbl_update_file_in_use
+            // 
+            this.lbl_update_file_in_use.AutoSize = true;
+            this.lbl_update_file_in_use.Location = new System.Drawing.Point(38, 51);
+            this.lbl_update_file_in_use.Name = "lbl_update_file_in_use";
+            this.lbl_update_file_in_use.Size = new System.Drawing.Size(91, 20);
+            this.lbl_update_file_in_use.TabIndex = 16;
+            this.lbl_update_file_in_use.Text = "File in Use: ";
             // 
             // cmbobx_update_id
             // 
@@ -452,14 +462,15 @@ namespace Project_Manager
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // lbl_update_file_in_use
+            // grpbx_update_tab
             // 
-            this.lbl_update_file_in_use.AutoSize = true;
-            this.lbl_update_file_in_use.Location = new System.Drawing.Point(38, 51);
-            this.lbl_update_file_in_use.Name = "lbl_update_file_in_use";
-            this.lbl_update_file_in_use.Size = new System.Drawing.Size(91, 20);
-            this.lbl_update_file_in_use.TabIndex = 16;
-            this.lbl_update_file_in_use.Text = "File in Use: ";
+            this.grpbx_update_tab.Controls.Add(this.btn_update_add_data);
+            this.grpbx_update_tab.Controls.Add(this.btn_update_add_person);
+            this.grpbx_update_tab.Location = new System.Drawing.Point(1, 60);
+            this.grpbx_update_tab.Name = "grpbx_update_tab";
+            this.grpbx_update_tab.Size = new System.Drawing.Size(137, 103);
+            this.grpbx_update_tab.TabIndex = 18;
+            this.grpbx_update_tab.TabStop = false;
             // 
             // Form1
             // 
@@ -483,6 +494,7 @@ namespace Project_Manager
             this.tab_update.PerformLayout();
             this.tab_data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_csv_data)).EndInit();
+            this.grpbx_update_tab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -525,6 +537,7 @@ namespace Project_Manager
         private System.Windows.Forms.Button btn_update_add_person;
         private System.Windows.Forms.Button btn_update_add_data;
         private System.Windows.Forms.Label lbl_update_file_in_use;
+        private System.Windows.Forms.GroupBox grpbx_update_tab;
     }
 }
 

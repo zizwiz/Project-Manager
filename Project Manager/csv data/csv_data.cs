@@ -32,7 +32,7 @@ namespace Project_Manager
                 {
                     //Load filename into the update page so we can use it later
                     lbl_update_file_in_use.Text += openFileDialog1.FileName;
-                     
+
                     // Get the data.
                     string[,] values = LoadCsv(openFileDialog1.FileName);
                     int num_rows = values.GetUpperBound(0) + 1;
@@ -64,6 +64,25 @@ namespace Project_Manager
                     foreach (DataGridViewColumn col in dgv_csv_data.Columns)
                         //col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                         col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                    //////////////////////////////////////////////////////
+                    /// Now lets populate the combo boxes on update page
+                    /// //////////////////////////////////////////////////
+
+                    // Add the data.
+                    for (int r = 1; r < values.GetUpperBound(0) + 1; r++)
+                    {
+                        if (!cmbobx_update_name.Items.Contains(values[r, 3]))
+                        {
+                            cmbobx_update_name.Items.Add(values[r, 3]);
+                            cmbobx_update_id.Items.Add(values[r, 4]);
+                            cmbobx_update_name.SelectedIndex = 0;
+                        }
+                    }
+
+                    //Now go and show the Update tab
+                    ShowTabs();
+
                 }
                 catch (Exception exception)
                 {

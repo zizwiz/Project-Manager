@@ -14,8 +14,19 @@ namespace Project_Manager
             if (tabControl1.SelectedTab == tabControl1.TabPages["tab_data"])
             {
                 grpbx_data_tab.Visible = true;
+                grpbx_data_tab.BringToFront();
+                grpbx_update_tab.Visible = false;
+                grpbx_update_tab.SendToBack();
             }
-            
+
+            if (tabControl1.SelectedTab == tabControl1.TabPages["tab_update"])
+            {
+                grpbx_data_tab.Visible = false;
+                grpbx_data_tab.SendToBack();
+                grpbx_update_tab.Visible = true;
+                grpbx_update_tab.BringToFront();
+            }
+
         }
 
 
