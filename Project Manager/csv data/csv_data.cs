@@ -30,10 +30,16 @@ namespace Project_Manager
             {
                 try
                 {
+                    //Load filename into the update page so we can use it later
+                    lbl_update_file_in_use.Text += openFileDialog1.FileName;
+                     
                     // Get the data.
                     string[,] values = LoadCsv(openFileDialog1.FileName);
                     int num_rows = values.GetUpperBound(0) + 1;
                     int num_cols = values.GetUpperBound(1) + 1;
+
+                    lbl_project_name.Text += values[1, 0];
+                    lbl_project_phase.Text += values[1, 1];
 
                     // Display the data to show we have it.
 
@@ -65,11 +71,9 @@ namespace Project_Manager
                     throw;
                 }
             }
-
-
         }
 
-        private void btn_write_csv_file_Click(object sender, EventArgs e)
+        private void btn_save_csv_file_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Title = "Save CSV Files";

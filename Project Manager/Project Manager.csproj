@@ -52,6 +52,15 @@
     <Compile Include="csv data\csv_data.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="graphs\CodeFile1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popups\AdditionalNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popups\AdditionalNames.Designer.cs">
+      <DependentUpon>AdditionalNames.cs</DependentUpon>
+    </Compile>
     <Compile Include="popups\ColumnName.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +78,14 @@
     <Compile Include="set up\button_setup.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="set up\FillUpdate_page_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="utils\CentreMessageBox\MsgBox.cs" />
+    <Compile Include="utils\CentreMessageBox\Win32.cs" />
+    <EmbeddedResource Include="popups\AdditionalNames.resx">
+      <DependentUpon>AdditionalNames.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="popups\ColumnName.resx">
       <DependentUpon>ColumnName.cs</DependentUpon>
     </EmbeddedResource>
