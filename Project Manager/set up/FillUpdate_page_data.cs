@@ -91,8 +91,7 @@ namespace Project_Manager
                 dgv_csv_data.Rows[num_rows].Cells[5].Value = txtbx_update_projected_hours.Text;
                 dgv_csv_data.Rows[num_rows].Cells[6].Value = txtbx_update_completed_hours.Text;
                 dgv_csv_data.Rows[num_rows].Cells[7].Value = txtbx_updated_income.Text;
-
-
+                
                 //Sort by name then by date
                 dgv_csv_data.Sort(dgv_csv_data.Columns[3], ListSortDirection.Ascending);
                 dgv_csv_data.Sort(dgv_csv_data.Columns[2], ListSortDirection.Descending);
