@@ -35,6 +35,7 @@ namespace Project_Manager
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_Save_Chart_Image = new System.Windows.Forms.Button();
             this.btn_clear_hours_chart = new System.Windows.Forms.Button();
             this.btn_draw_hours_chart = new System.Windows.Forms.Button();
             this.grpbx_update_tab = new System.Windows.Forms.GroupBox();
@@ -98,7 +99,7 @@ namespace Project_Manager
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.btn_Save_Chart_Image = new System.Windows.Forms.Button();
+            this.grpbx_peoples_worked_hours = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -130,6 +131,7 @@ namespace Project_Manager
             this.tableLayoutPanel5.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel24.SuspendLayout();
+            this.grpbx_peoples_worked_hours.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -173,9 +175,8 @@ namespace Project_Manager
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.grpbx_peoples_worked_hours);
             this.panel3.Controls.Add(this.btn_Save_Chart_Image);
-            this.panel3.Controls.Add(this.btn_clear_hours_chart);
-            this.panel3.Controls.Add(this.btn_draw_hours_chart);
             this.panel3.Controls.Add(this.grpbx_update_tab);
             this.panel3.Controls.Add(this.grpbx_data_tab);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -184,10 +185,22 @@ namespace Project_Manager
             this.panel3.Size = new System.Drawing.Size(138, 730);
             this.panel3.TabIndex = 0;
             // 
+            // btn_Save_Chart_Image
+            // 
+            this.btn_Save_Chart_Image.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Save_Chart_Image.Location = new System.Drawing.Point(13, 615);
+            this.btn_Save_Chart_Image.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Save_Chart_Image.Name = "btn_Save_Chart_Image";
+            this.btn_Save_Chart_Image.Size = new System.Drawing.Size(112, 64);
+            this.btn_Save_Chart_Image.TabIndex = 21;
+            this.btn_Save_Chart_Image.Text = "Save Chart Image";
+            this.btn_Save_Chart_Image.UseVisualStyleBackColor = true;
+            this.btn_Save_Chart_Image.Click += new System.EventHandler(this.btn_Save_Chart_Image_Click);
+            // 
             // btn_clear_hours_chart
             // 
             this.btn_clear_hours_chart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_clear_hours_chart.Location = new System.Drawing.Point(13, 422);
+            this.btn_clear_hours_chart.Location = new System.Drawing.Point(10, 83);
             this.btn_clear_hours_chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_clear_hours_chart.Name = "btn_clear_hours_chart";
             this.btn_clear_hours_chart.Size = new System.Drawing.Size(112, 64);
@@ -199,7 +212,7 @@ namespace Project_Manager
             // btn_draw_hours_chart
             // 
             this.btn_draw_hours_chart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_draw_hours_chart.Location = new System.Drawing.Point(13, 348);
+            this.btn_draw_hours_chart.Location = new System.Drawing.Point(10, 9);
             this.btn_draw_hours_chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_draw_hours_chart.Name = "btn_draw_hours_chart";
             this.btn_draw_hours_chart.Size = new System.Drawing.Size(112, 64);
@@ -837,17 +850,15 @@ namespace Project_Manager
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // btn_Save_Chart_Image
+            // grpbx_peoples_worked_hours
             // 
-            this.btn_Save_Chart_Image.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Save_Chart_Image.Location = new System.Drawing.Point(13, 615);
-            this.btn_Save_Chart_Image.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_Save_Chart_Image.Name = "btn_Save_Chart_Image";
-            this.btn_Save_Chart_Image.Size = new System.Drawing.Size(112, 64);
-            this.btn_Save_Chart_Image.TabIndex = 21;
-            this.btn_Save_Chart_Image.Text = "Save Chart Image";
-            this.btn_Save_Chart_Image.UseVisualStyleBackColor = true;
-            this.btn_Save_Chart_Image.Click += new System.EventHandler(this.btn_Save_Chart_Image_Click);
+            this.grpbx_peoples_worked_hours.Controls.Add(this.btn_clear_hours_chart);
+            this.grpbx_peoples_worked_hours.Controls.Add(this.btn_draw_hours_chart);
+            this.grpbx_peoples_worked_hours.Location = new System.Drawing.Point(1, 48);
+            this.grpbx_peoples_worked_hours.Name = "grpbx_peoples_worked_hours";
+            this.grpbx_peoples_worked_hours.Size = new System.Drawing.Size(134, 155);
+            this.grpbx_peoples_worked_hours.TabIndex = 22;
+            this.grpbx_peoples_worked_hours.TabStop = false;
             // 
             // Form1
             // 
@@ -901,6 +912,7 @@ namespace Project_Manager
             this.panel23.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
+            this.grpbx_peoples_worked_hours.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -975,6 +987,7 @@ namespace Project_Manager
         private System.Windows.Forms.Button btn_draw_hours_chart;
         private System.Windows.Forms.Button btn_clear_hours_chart;
         private System.Windows.Forms.Button btn_Save_Chart_Image;
+        private System.Windows.Forms.GroupBox grpbx_peoples_worked_hours;
     }
 }
 
