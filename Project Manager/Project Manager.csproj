@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="csv data\csv_data.cs">
+    <Compile Include="csv data\common_csv.cs" />
+    <Compile Include="csv data\finance_csv_data.cs" />
+    <Compile Include="csv data\people_csv_data.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="graphs\Common.cs">

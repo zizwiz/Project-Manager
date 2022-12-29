@@ -30,6 +30,8 @@ namespace Project_Manager
             {
                 try
                 {
+                    //First we load in the Data file regarding peoples hours
+
                     //Load filename into the update page so we can use it later
                     lbl_update_file_in_use.Text += openFileDialog1.FileName;
 
@@ -80,8 +82,75 @@ namespace Project_Manager
                         }
                     }
 
+                    ////Now we can open the Finance file if we want and if it exists.
+                    //openFileDialog1.Title = "Open Finance File.";
+
+                    //if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                    //{
+                    //    try
+                    //    {
+
+                    //        //Load filename into the update page so we can use it later
+                    //        lbl_finance_file_in_use.Text += openFileDialog1.FileName;
+
+                    //        // Get the data.
+                    //        values = LoadCsv(openFileDialog1.FileName);
+                    //        num_rows = values.GetUpperBound(0) + 1;
+                    //        num_cols = values.GetUpperBound(1) + 1;
+
+                            // Display the data to show we have it.
+
+                            // Make column headers.
+                            // For this example, we assume the first row
+                            // contains the column names.
+                            //tab_finance.dgv_csv_finance.Columns.Clear();
+                            //for (int c = 0; c < num_cols; c++)
+                            //    dgv_csv_finance.Add(values[0, c], values[0, c]);
+
+                            //// Add the data.
+                            //for (int r = 1; r < num_rows; r++)
+                            //{
+                            //    dgv_csv_finance.Rows.Add();
+                            //    for (int c = 0; c < num_cols; c++)
+                            //    {
+                            //        dgv_csv_data.Rows[r - 1].Cells[c].Value = values[r, c];
+                            //    }
+                            //}
+
+                            ////// Make the columns autosize.
+                            //foreach (DataGridViewColumn col in dgv_csv_data.Columns)
+                            //    //col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                            //    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                            ////////////////////////////////////////////////////////
+                            ///// Now lets populate the combo boxes on update page
+                            ///// //////////////////////////////////////////////////
+
+                            //// Add the data.
+                            //for (int r = 1; r < values.GetUpperBound(0) + 1; r++)
+                            //{
+                            //    if (!cmbobx_update_name.Items.Contains(values[r, 3]))
+                            //    {
+                            //        cmbobx_update_name.Items.Add(values[r, 3]);
+                            //        cmbobx_update_id.Items.Add(values[r, 4]);
+                            //        cmbobx_update_name.SelectedIndex = 0;
+                            //    }
+
+
+
+
+
+
+                    //        }
+                    //    catch (Exception exception)
+                    //    {
+                    //        Console.WriteLine(exception);
+                    //        throw;
+                    //    }
+                    //}
+
                     //Now go and show the Update tab
-                    ShowTabs();
+                            ShowTabs();
 
                 }
                 catch (Exception exception)

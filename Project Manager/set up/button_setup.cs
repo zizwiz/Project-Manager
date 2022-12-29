@@ -19,7 +19,7 @@ namespace Project_Manager
                 btn_Save_Chart_Image.Visible = false;
             }
 
-            if (tabControl1.SelectedTab == tabControl1.TabPages["tab_update"])
+            if (tabControl1.SelectedTab == tabControl1.TabPages["tab_update_people"])
             {
                 grpbx_data_tab.Visible = false;
                 grpbx_data_tab.SendToBack();
