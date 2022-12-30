@@ -25,9 +25,6 @@ namespace Project_Manager
             Close();
         }
 
-        private void btn_open_csv_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

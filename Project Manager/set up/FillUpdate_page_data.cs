@@ -54,9 +54,9 @@ namespace Project_Manager
             addionalNamePopup.Dispose();
         }
 
-        private void btn_update_add_data_Click(object sender, EventArgs e)
+        private void btn_add_people_data_Click(object sender, EventArgs e)
         {
-            int num_rows = dgv_csv_data.RowCount;
+            int num_rows = dgv_people_csv_data.RowCount;
 
             bool checkFlag = true;
 
@@ -65,8 +65,8 @@ namespace Project_Manager
 
             for (int i = 0; i < num_rows; i++)
             {
-                if (dgv_csv_data.Rows[i].Cells[2].Value.ToString() == dateTimePicker1.Value.ToShortDateString() &&
-                    dgv_csv_data.Rows[i].Cells[3].Value.ToString() == cmbobx_update_name.SelectedItem.ToString())
+                if (dgv_people_csv_data.Rows[i].Cells[2].Value.ToString() == dateTimePicker1.Value.ToShortDateString() &&
+                    dgv_people_csv_data.Rows[i].Cells[3].Value.ToString() == cmbobx_update_name.SelectedItem.ToString())
                 {
                     checkFlag = false; //it exists
                     MsgBox.Show("That date and name have already been filled in", "Problem", MessageBoxButtons.OK,
@@ -79,25 +79,32 @@ namespace Project_Manager
             if (checkFlag) //only add if data is not already been entered
             {
 
-                dgv_csv_data.Rows.Add();
+                dgv_people_csv_data.Rows.Add();
 
-                dgv_csv_data.Rows[num_rows].Cells[0].Value =
+                dgv_people_csv_data.Rows[num_rows].Cells[0].Value =
                     lbl_project_name.Text.Substring(lbl_project_name.Text.IndexOf(' ') + 1);
-                dgv_csv_data.Rows[num_rows].Cells[1].Value =
+                dgv_people_csv_data.Rows[num_rows].Cells[1].Value =
                     lbl_project_phase.Text.Substring(lbl_project_phase.Text.IndexOf(' ') + 1);
-                dgv_csv_data.Rows[num_rows].Cells[2].Value = dateTimePicker1.Value.ToShortDateString();
-                dgv_csv_data.Rows[num_rows].Cells[3].Value = cmbobx_update_name.SelectedItem;
-                dgv_csv_data.Rows[num_rows].Cells[4].Value = cmbobx_update_id.SelectedItem;
-                dgv_csv_data.Rows[num_rows].Cells[5].Value = txtbx_update_projected_hours.Text;
-                dgv_csv_data.Rows[num_rows].Cells[6].Value = txtbx_update_completed_hours.Text;
-                dgv_csv_data.Rows[num_rows].Cells[7].Value = txtbx_updated_income.Text;
+                dgv_people_csv_data.Rows[num_rows].Cells[2].Value = dateTimePicker1.Value.ToShortDateString();
+                dgv_people_csv_data.Rows[num_rows].Cells[3].Value = cmbobx_update_name.SelectedItem;
+                dgv_people_csv_data.Rows[num_rows].Cells[4].Value = cmbobx_update_id.SelectedItem;
+                dgv_people_csv_data.Rows[num_rows].Cells[5].Value = txtbx_update_projected_hours.Text;
+                dgv_people_csv_data.Rows[num_rows].Cells[6].Value = txtbx_update_completed_hours.Text;
+                dgv_people_csv_data.Rows[num_rows].Cells[7].Value = txtbx_updated_income.Text;
                 
                 //Sort by name then by date
-                dgv_csv_data.Sort(dgv_csv_data.Columns[3], ListSortDirection.Ascending);
-                dgv_csv_data.Sort(dgv_csv_data.Columns[2], ListSortDirection.Descending);
+                dgv_people_csv_data.Sort(dgv_people_csv_data.Columns[3], ListSortDirection.Ascending);
+                dgv_people_csv_data.Sort(dgv_people_csv_data.Columns[2], ListSortDirection.Descending);
 
             }
 
         }
+
+
+        private void btn_add_finance_data_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

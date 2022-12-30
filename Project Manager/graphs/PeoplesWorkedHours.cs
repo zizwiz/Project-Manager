@@ -30,7 +30,7 @@ namespace Project_Manager
                 double acheived_hours = 0.0;
 
                 //loop through the datagridview and extract the hours for said person.
-                foreach (DataGridViewRow row in dgv_csv_data.Rows)
+                foreach (DataGridViewRow row in dgv_people_csv_data.Rows)
                 {
                     if (row.Cells[4].Value.ToString() == id)
                     {
