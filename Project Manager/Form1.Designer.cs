@@ -49,7 +49,7 @@ namespace Project_Manager
             this.btn_exit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tab_update_people = new System.Windows.Forms.TabPage();
+            this.tab_input_updates = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbl_project_name = new System.Windows.Forms.Label();
@@ -101,24 +101,8 @@ namespace Project_Manager
             this.btn_add_finance_data = new System.Windows.Forms.Button();
             this.panel35 = new System.Windows.Forms.Panel();
             this.btn_update_add_person = new System.Windows.Forms.Button();
-            this.tab_data = new System.Windows.Forms.TabPage();
+            this.tab_people = new System.Windows.Forms.TabPage();
             this.dgv_people_csv_data = new System.Windows.Forms.DataGridView();
-            this.tab_update_finance = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.lbl_project_finance_name = new System.Windows.Forms.Label();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel39 = new System.Windows.Forms.Panel();
-            this.lbl_project_finance_phase = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
             this.tab_finance = new System.Windows.Forms.TabPage();
             this.dgv_finance_csv_data = new System.Windows.Forms.DataGridView();
             this.tab_people_worked_hours = new System.Windows.Forms.TabPage();
@@ -145,7 +129,7 @@ namespace Project_Manager
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tab_update_people.SuspendLayout();
+            this.tab_input_updates.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -168,15 +152,8 @@ namespace Project_Manager
             this.panel30.SuspendLayout();
             this.panel34.SuspendLayout();
             this.panel35.SuspendLayout();
-            this.tab_data.SuspendLayout();
+            this.tab_people.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_people_csv_data)).BeginInit();
-            this.tab_update_finance.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            this.panel31.SuspendLayout();
-            this.panel39.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel28.SuspendLayout();
             this.tab_finance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_finance_csv_data)).BeginInit();
             this.tab_people_worked_hours.SuspendLayout();
@@ -389,9 +366,8 @@ namespace Project_Manager
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tab_update_people);
-            this.tabControl1.Controls.Add(this.tab_data);
-            this.tabControl1.Controls.Add(this.tab_update_finance);
+            this.tabControl1.Controls.Add(this.tab_input_updates);
+            this.tabControl1.Controls.Add(this.tab_people);
             this.tabControl1.Controls.Add(this.tab_finance);
             this.tabControl1.Controls.Add(this.tab_people_worked_hours);
             this.tabControl1.Controls.Add(this.tabPage4);
@@ -404,16 +380,16 @@ namespace Project_Manager
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // tab_update_people
+            // tab_input_updates
             // 
-            this.tab_update_people.Controls.Add(this.tableLayoutPanel3);
-            this.tab_update_people.Location = new System.Drawing.Point(4, 29);
-            this.tab_update_people.Name = "tab_update_people";
-            this.tab_update_people.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_update_people.Size = new System.Drawing.Size(958, 763);
-            this.tab_update_people.TabIndex = 0;
-            this.tab_update_people.Text = "People Update";
-            this.tab_update_people.UseVisualStyleBackColor = true;
+            this.tab_input_updates.Controls.Add(this.tableLayoutPanel3);
+            this.tab_input_updates.Location = new System.Drawing.Point(4, 29);
+            this.tab_input_updates.Name = "tab_input_updates";
+            this.tab_input_updates.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_input_updates.Size = new System.Drawing.Size(958, 763);
+            this.tab_input_updates.TabIndex = 0;
+            this.tab_input_updates.Text = "Input Updates";
+            this.tab_input_updates.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
@@ -923,16 +899,16 @@ namespace Project_Manager
             this.btn_update_add_person.UseVisualStyleBackColor = true;
             this.btn_update_add_person.Click += new System.EventHandler(this.btn_update_add_person_Click);
             // 
-            // tab_data
+            // tab_people
             // 
-            this.tab_data.Controls.Add(this.dgv_people_csv_data);
-            this.tab_data.Location = new System.Drawing.Point(4, 29);
-            this.tab_data.Name = "tab_data";
-            this.tab_data.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_data.Size = new System.Drawing.Size(958, 763);
-            this.tab_data.TabIndex = 1;
-            this.tab_data.Text = "Data";
-            this.tab_data.UseVisualStyleBackColor = true;
+            this.tab_people.Controls.Add(this.dgv_people_csv_data);
+            this.tab_people.Location = new System.Drawing.Point(4, 29);
+            this.tab_people.Name = "tab_people";
+            this.tab_people.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_people.Size = new System.Drawing.Size(958, 763);
+            this.tab_people.TabIndex = 1;
+            this.tab_people.Text = "People Data";
+            this.tab_people.UseVisualStyleBackColor = true;
             // 
             // dgv_people_csv_data
             // 
@@ -948,181 +924,6 @@ namespace Project_Manager
             this.dgv_people_csv_data.Size = new System.Drawing.Size(952, 757);
             this.dgv_people_csv_data.TabIndex = 0;
             // 
-            // tab_update_finance
-            // 
-            this.tab_update_finance.Controls.Add(this.tableLayoutPanel6);
-            this.tab_update_finance.Location = new System.Drawing.Point(4, 29);
-            this.tab_update_finance.Name = "tab_update_finance";
-            this.tab_update_finance.Size = new System.Drawing.Size(958, 763);
-            this.tab_update_finance.TabIndex = 6;
-            this.tab_update_finance.Text = "Finance Update";
-            this.tab_update_finance.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 4;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.panel31, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.panel32, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.panel39, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.panel15, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.panel16, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.panel25, 0, 4);
-            this.tableLayoutPanel6.Controls.Add(this.panel26, 0, 6);
-            this.tableLayoutPanel6.Controls.Add(this.panel27, 0, 7);
-            this.tableLayoutPanel6.Controls.Add(this.panel28, 0, 8);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 13;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(958, 763);
-            this.tableLayoutPanel6.TabIndex = 18;
-            // 
-            // panel31
-            // 
-            this.panel31.Controls.Add(this.lbl_project_finance_name);
-            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel31.Location = new System.Drawing.Point(3, 3);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(294, 44);
-            this.panel31.TabIndex = 0;
-            // 
-            // lbl_project_finance_name
-            // 
-            this.lbl_project_finance_name.AutoSize = true;
-            this.lbl_project_finance_name.Location = new System.Drawing.Point(3, 11);
-            this.lbl_project_finance_name.Name = "lbl_project_finance_name";
-            this.lbl_project_finance_name.Size = new System.Drawing.Size(66, 20);
-            this.lbl_project_finance_name.TabIndex = 0;
-            this.lbl_project_finance_name.Text = "Project: ";
-            // 
-            // panel32
-            // 
-            this.tableLayoutPanel6.SetColumnSpan(this.panel32, 3);
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel32.Location = new System.Drawing.Point(3, 53);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(894, 94);
-            this.panel32.TabIndex = 1;
-            // 
-            // panel39
-            // 
-            this.panel39.Controls.Add(this.lbl_project_finance_phase);
-            this.panel39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel39.Location = new System.Drawing.Point(303, 3);
-            this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(294, 44);
-            this.panel39.TabIndex = 8;
-            // 
-            // lbl_project_finance_phase
-            // 
-            this.lbl_project_finance_phase.AutoSize = true;
-            this.lbl_project_finance_phase.Location = new System.Drawing.Point(3, 11);
-            this.lbl_project_finance_phase.Name = "lbl_project_finance_phase";
-            this.lbl_project_finance_phase.Size = new System.Drawing.Size(62, 20);
-            this.lbl_project_finance_phase.TabIndex = 1;
-            this.lbl_project_finance_phase.Text = "Phase: ";
-            // 
-            // panel15
-            // 
-            this.tableLayoutPanel6.SetColumnSpan(this.panel15, 2);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(3, 153);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(594, 44);
-            this.panel15.TabIndex = 26;
-            // 
-            // panel16
-            // 
-            this.tableLayoutPanel6.SetColumnSpan(this.panel16, 2);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(3, 203);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(594, 44);
-            this.panel16.TabIndex = 27;
-            // 
-            // panel25
-            // 
-            this.tableLayoutPanel6.SetColumnSpan(this.panel25, 2);
-            this.panel25.Controls.Add(this.label21);
-            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel25.Location = new System.Drawing.Point(3, 253);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(594, 44);
-            this.panel25.TabIndex = 28;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(5, 14);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(93, 20);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "Remaining: ";
-            // 
-            // panel26
-            // 
-            this.tableLayoutPanel6.SetColumnSpan(this.panel26, 2);
-            this.panel26.Controls.Add(this.label18);
-            this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel26.Location = new System.Drawing.Point(3, 353);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(594, 44);
-            this.panel26.TabIndex = 29;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(5, 12);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(111, 20);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "Project Value: ";
-            // 
-            // panel27
-            // 
-            this.tableLayoutPanel6.SetColumnSpan(this.panel27, 2);
-            this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel27.Location = new System.Drawing.Point(3, 403);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(594, 44);
-            this.panel27.TabIndex = 30;
-            // 
-            // panel28
-            // 
-            this.tableLayoutPanel6.SetColumnSpan(this.panel28, 2);
-            this.panel28.Controls.Add(this.label22);
-            this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel28.Location = new System.Drawing.Point(3, 453);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(594, 44);
-            this.panel28.TabIndex = 31;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 11);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(123, 20);
-            this.label22.TabIndex = 15;
-            this.label22.Text = "Money Remain: ";
-            // 
             // tab_finance
             // 
             this.tab_finance.Controls.Add(this.dgv_finance_csv_data);
@@ -1130,7 +931,7 @@ namespace Project_Manager
             this.tab_finance.Name = "tab_finance";
             this.tab_finance.Size = new System.Drawing.Size(958, 763);
             this.tab_finance.TabIndex = 5;
-            this.tab_finance.Text = "Finance";
+            this.tab_finance.Text = "Finance Data";
             this.tab_finance.UseVisualStyleBackColor = true;
             // 
             // dgv_finance_csv_data
@@ -1324,7 +1125,7 @@ namespace Project_Manager
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tab_update_people.ResumeLayout(false);
+            this.tab_input_updates.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -1365,20 +1166,8 @@ namespace Project_Manager
             this.panel30.ResumeLayout(false);
             this.panel34.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
-            this.tab_data.ResumeLayout(false);
+            this.tab_people.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_people_csv_data)).EndInit();
-            this.tab_update_finance.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.panel31.ResumeLayout(false);
-            this.panel31.PerformLayout();
-            this.panel39.ResumeLayout(false);
-            this.panel39.PerformLayout();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
             this.tab_finance.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_finance_csv_data)).EndInit();
             this.tab_people_worked_hours.ResumeLayout(false);
@@ -1403,8 +1192,8 @@ namespace Project_Manager
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tab_update_people;
-        private System.Windows.Forms.TabPage tab_data;
+        private System.Windows.Forms.TabPage tab_input_updates;
+        private System.Windows.Forms.TabPage tab_people;
         private System.Windows.Forms.DataGridView dgv_people_csv_data;
         private System.Windows.Forms.TabPage tab_people_worked_hours;
         private System.Windows.Forms.TabPage tabPage4;
@@ -1460,22 +1249,6 @@ namespace Project_Manager
         private System.Windows.Forms.GroupBox grpbx_peoples_worked_hours;
         private System.Windows.Forms.TabPage tab_finance;
         private System.Windows.Forms.DataGridView dgv_finance_csv_data;
-        private System.Windows.Forms.TabPage tab_update_finance;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Panel panel31;
-        private System.Windows.Forms.Label lbl_project_finance_name;
-        private System.Windows.Forms.Panel panel32;
-        private System.Windows.Forms.Panel panel39;
-        private System.Windows.Forms.Label lbl_project_finance_phase;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btn_open_finance;
         private System.Windows.Forms.Label lbl_finance_file_in_use;
         private System.Windows.Forms.Label lbl_project_start;

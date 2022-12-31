@@ -8,7 +8,7 @@ namespace Project_Manager
         {
             grpbx_data_tab.Visible = false;
 
-            if (tabControl1.SelectedTab == tabControl1.TabPages["tab_data"])
+            if (tabControl1.SelectedTab == tabControl1.TabPages["tab_people"])
             {
                 grpbx_data_tab.Visible = true;
                 grpbx_data_tab.BringToFront();
@@ -17,7 +17,7 @@ namespace Project_Manager
                 btn_Save_Chart_Image.Visible = false;
             }
 
-            if (tabControl1.SelectedTab == tabControl1.TabPages["tab_update_people"])
+            if (tabControl1.SelectedTab == tabControl1.TabPages["tab_input_updates"])
             {
                 grpbx_data_tab.Visible = false;
                 grpbx_data_tab.SendToBack();
