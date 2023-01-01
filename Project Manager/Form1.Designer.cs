@@ -30,21 +30,18 @@ namespace Project_Manager
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.grpbx_peoples_worked_hours = new System.Windows.Forms.GroupBox();
-            this.btn_clear_hours_chart = new System.Windows.Forms.Button();
-            this.btn_draw_hours_chart = new System.Windows.Forms.Button();
-            this.btn_Save_Chart_Image = new System.Windows.Forms.Button();
+            this.btn_save_finance_csv_file = new System.Windows.Forms.Button();
             this.grpbx_data_tab = new System.Windows.Forms.GroupBox();
-            this.btn_open_finance = new System.Windows.Forms.Button();
             this.btn_add_csv_column = new System.Windows.Forms.Button();
             this.btn_add_csv_row = new System.Windows.Forms.Button();
-            this.btn_save_csv_file = new System.Windows.Forms.Button();
-            this.btn_open_people = new System.Windows.Forms.Button();
+            this.btn_save_people_csv_file = new System.Windows.Forms.Button();
+            this.btn_open_project = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_exit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -113,18 +110,39 @@ namespace Project_Manager
             this.panel22 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.btn_Save_Chart_Image = new System.Windows.Forms.Button();
+            this.panel24 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.btn_draw_hours_chart = new System.Windows.Forms.Button();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.btn_clear_hours_chart = new System.Windows.Forms.Button();
+            this.tab_weekly_income = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.chrt_weekly_income = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.btn_weekly_income_chart_draw = new System.Windows.Forms.Button();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.btn_weekly_income_chart_save = new System.Windows.Forms.Button();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.btn_weekly_income_chart_clear = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.grpbx_peoples_worked_hours.SuspendLayout();
             this.grpbx_data_tab.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -165,6 +183,19 @@ namespace Project_Manager
             this.tableLayoutPanel5.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel24.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel31.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.tab_weekly_income.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chrt_weekly_income)).BeginInit();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel36.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -208,85 +239,37 @@ namespace Project_Manager
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.grpbx_peoples_worked_hours);
-            this.panel3.Controls.Add(this.btn_Save_Chart_Image);
+            this.panel3.Controls.Add(this.btn_save_finance_csv_file);
             this.panel3.Controls.Add(this.grpbx_data_tab);
+            this.panel3.Controls.Add(this.btn_save_people_csv_file);
+            this.panel3.Controls.Add(this.btn_open_project);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(138, 730);
             this.panel3.TabIndex = 0;
             // 
-            // grpbx_peoples_worked_hours
+            // btn_save_finance_csv_file
             // 
-            this.grpbx_peoples_worked_hours.Controls.Add(this.btn_clear_hours_chart);
-            this.grpbx_peoples_worked_hours.Controls.Add(this.btn_draw_hours_chart);
-            this.grpbx_peoples_worked_hours.Location = new System.Drawing.Point(7, 448);
-            this.grpbx_peoples_worked_hours.Name = "grpbx_peoples_worked_hours";
-            this.grpbx_peoples_worked_hours.Size = new System.Drawing.Size(134, 155);
-            this.grpbx_peoples_worked_hours.TabIndex = 22;
-            this.grpbx_peoples_worked_hours.TabStop = false;
-            // 
-            // btn_clear_hours_chart
-            // 
-            this.btn_clear_hours_chart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_clear_hours_chart.Location = new System.Drawing.Point(10, 83);
-            this.btn_clear_hours_chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_clear_hours_chart.Name = "btn_clear_hours_chart";
-            this.btn_clear_hours_chart.Size = new System.Drawing.Size(112, 64);
-            this.btn_clear_hours_chart.TabIndex = 20;
-            this.btn_clear_hours_chart.Text = "Clear Hours Chart";
-            this.btn_clear_hours_chart.UseVisualStyleBackColor = true;
-            this.btn_clear_hours_chart.Click += new System.EventHandler(this.btn_clear_hours_chart_Click);
-            // 
-            // btn_draw_hours_chart
-            // 
-            this.btn_draw_hours_chart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_draw_hours_chart.Location = new System.Drawing.Point(10, 9);
-            this.btn_draw_hours_chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_draw_hours_chart.Name = "btn_draw_hours_chart";
-            this.btn_draw_hours_chart.Size = new System.Drawing.Size(112, 64);
-            this.btn_draw_hours_chart.TabIndex = 19;
-            this.btn_draw_hours_chart.Text = "Draw Hours Chart";
-            this.btn_draw_hours_chart.UseVisualStyleBackColor = true;
-            this.btn_draw_hours_chart.Click += new System.EventHandler(this.btn_draw_hours_chart_Click);
-            // 
-            // btn_Save_Chart_Image
-            // 
-            this.btn_Save_Chart_Image.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Save_Chart_Image.Location = new System.Drawing.Point(13, 615);
-            this.btn_Save_Chart_Image.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_Save_Chart_Image.Name = "btn_Save_Chart_Image";
-            this.btn_Save_Chart_Image.Size = new System.Drawing.Size(112, 64);
-            this.btn_Save_Chart_Image.TabIndex = 21;
-            this.btn_Save_Chart_Image.Text = "Save Chart Image";
-            this.btn_Save_Chart_Image.UseVisualStyleBackColor = true;
-            this.btn_Save_Chart_Image.Click += new System.EventHandler(this.btn_Save_Chart_Image_Click);
+            this.btn_save_finance_csv_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_save_finance_csv_file.Location = new System.Drawing.Point(16, 548);
+            this.btn_save_finance_csv_file.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_save_finance_csv_file.Name = "btn_save_finance_csv_file";
+            this.btn_save_finance_csv_file.Size = new System.Drawing.Size(112, 35);
+            this.btn_save_finance_csv_file.TabIndex = 12;
+            this.btn_save_finance_csv_file.Text = "Save";
+            this.btn_save_finance_csv_file.UseVisualStyleBackColor = true;
+            this.btn_save_finance_csv_file.Click += new System.EventHandler(this.btn_save_finance_csv_file_Click);
             // 
             // grpbx_data_tab
             // 
-            this.grpbx_data_tab.Controls.Add(this.btn_open_finance);
             this.grpbx_data_tab.Controls.Add(this.btn_add_csv_column);
             this.grpbx_data_tab.Controls.Add(this.btn_add_csv_row);
-            this.grpbx_data_tab.Controls.Add(this.btn_save_csv_file);
-            this.grpbx_data_tab.Controls.Add(this.btn_open_people);
             this.grpbx_data_tab.Location = new System.Drawing.Point(8, 159);
             this.grpbx_data_tab.Name = "grpbx_data_tab";
             this.grpbx_data_tab.Size = new System.Drawing.Size(137, 283);
             this.grpbx_data_tab.TabIndex = 11;
             this.grpbx_data_tab.TabStop = false;
-            // 
-            // btn_open_finance
-            // 
-            this.btn_open_finance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_open_finance.Location = new System.Drawing.Point(8, 74);
-            this.btn_open_finance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_open_finance.Name = "btn_open_finance";
-            this.btn_open_finance.Size = new System.Drawing.Size(112, 70);
-            this.btn_open_finance.TabIndex = 11;
-            this.btn_open_finance.Text = "Open Finance";
-            this.btn_open_finance.UseVisualStyleBackColor = true;
-            this.btn_open_finance.Click += new System.EventHandler(this.btn_open_finance_Click);
             // 
             // btn_add_csv_column
             // 
@@ -312,29 +295,29 @@ namespace Project_Manager
             this.btn_add_csv_row.UseVisualStyleBackColor = true;
             this.btn_add_csv_row.Click += new System.EventHandler(this.btn_add_csv_row_Click);
             // 
-            // btn_save_csv_file
+            // btn_save_people_csv_file
             // 
-            this.btn_save_csv_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_save_csv_file.Location = new System.Drawing.Point(8, 235);
-            this.btn_save_csv_file.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_save_csv_file.Name = "btn_save_csv_file";
-            this.btn_save_csv_file.Size = new System.Drawing.Size(112, 35);
-            this.btn_save_csv_file.TabIndex = 8;
-            this.btn_save_csv_file.Text = "Save";
-            this.btn_save_csv_file.UseVisualStyleBackColor = true;
-            this.btn_save_csv_file.Click += new System.EventHandler(this.btn_save_csv_file_Click);
+            this.btn_save_people_csv_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_save_people_csv_file.Location = new System.Drawing.Point(13, 481);
+            this.btn_save_people_csv_file.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_save_people_csv_file.Name = "btn_save_people_csv_file";
+            this.btn_save_people_csv_file.Size = new System.Drawing.Size(112, 35);
+            this.btn_save_people_csv_file.TabIndex = 8;
+            this.btn_save_people_csv_file.Text = "Save";
+            this.btn_save_people_csv_file.UseVisualStyleBackColor = true;
+            this.btn_save_people_csv_file.Click += new System.EventHandler(this.btn_save_people_csv_file_Click);
             // 
-            // btn_open_people
+            // btn_open_project
             // 
-            this.btn_open_people.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_open_people.Location = new System.Drawing.Point(8, 14);
-            this.btn_open_people.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_open_people.Name = "btn_open_people";
-            this.btn_open_people.Size = new System.Drawing.Size(112, 53);
-            this.btn_open_people.TabIndex = 7;
-            this.btn_open_people.Text = "Open People";
-            this.btn_open_people.UseVisualStyleBackColor = true;
-            this.btn_open_people.Click += new System.EventHandler(this.btn_open_people_Click);
+            this.btn_open_project.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_open_project.Location = new System.Drawing.Point(16, 71);
+            this.btn_open_project.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_open_project.Name = "btn_open_project";
+            this.btn_open_project.Size = new System.Drawing.Size(112, 53);
+            this.btn_open_project.TabIndex = 7;
+            this.btn_open_project.Text = "Open Project";
+            this.btn_open_project.UseVisualStyleBackColor = true;
+            this.btn_open_project.Click += new System.EventHandler(this.btn_open_project_Click);
             // 
             // panel4
             // 
@@ -370,7 +353,7 @@ namespace Project_Manager
             this.tabControl1.Controls.Add(this.tab_people);
             this.tabControl1.Controls.Add(this.tab_finance);
             this.tabControl1.Controls.Add(this.tab_people_worked_hours);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tab_weekly_income);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -1015,13 +998,17 @@ namespace Project_Manager
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.ColumnCount = 4;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
+            this.tableLayoutPanel5.ColumnCount = 5;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
             this.tableLayoutPanel5.Controls.Add(this.panel23, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel24, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel28, 4, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel31, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel32, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -1032,18 +1019,39 @@ namespace Project_Manager
             // 
             // panel23
             // 
-            this.panel23.Controls.Add(this.label5);
-            this.panel23.Controls.Add(this.textBox1);
+            this.panel23.Controls.Add(this.btn_Save_Chart_Image);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(449, 3);
+            this.panel23.Location = new System.Drawing.Point(361, 3);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(244, 48);
+            this.panel23.Size = new System.Drawing.Size(170, 48);
             this.panel23.TabIndex = 0;
+            // 
+            // btn_Save_Chart_Image
+            // 
+            this.btn_Save_Chart_Image.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Save_Chart_Image.Location = new System.Drawing.Point(0, 5);
+            this.btn_Save_Chart_Image.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Save_Chart_Image.Name = "btn_Save_Chart_Image";
+            this.btn_Save_Chart_Image.Size = new System.Drawing.Size(166, 38);
+            this.btn_Save_Chart_Image.TabIndex = 21;
+            this.btn_Save_Chart_Image.Text = "Save Chart Image";
+            this.btn_Save_Chart_Image.UseVisualStyleBackColor = true;
+            this.btn_Save_Chart_Image.Click += new System.EventHandler(this.btn_Save_Chart_Image_Click);
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.label5);
+            this.panel24.Controls.Add(this.textBox1);
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel24.Location = new System.Drawing.Point(537, 3);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(194, 48);
+            this.panel24.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 11);
+            this.label5.Location = new System.Drawing.Point(58, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 20);
             this.label5.TabIndex = 1;
@@ -1053,25 +1061,25 @@ namespace Project_Manager
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(140)))), ((int)(((byte)(240)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(13, 12);
+            this.textBox1.Location = new System.Drawing.Point(20, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(32, 19);
             this.textBox1.TabIndex = 0;
             // 
-            // panel24
+            // panel28
             // 
-            this.panel24.Controls.Add(this.label6);
-            this.panel24.Controls.Add(this.textBox2);
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel24.Location = new System.Drawing.Point(699, 3);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(244, 48);
-            this.panel24.TabIndex = 1;
+            this.panel28.Controls.Add(this.label6);
+            this.panel28.Controls.Add(this.textBox2);
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel28.Location = new System.Drawing.Point(737, 3);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(206, 48);
+            this.panel28.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(50, 12);
+            this.label6.Location = new System.Drawing.Point(51, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 20);
             this.label6.TabIndex = 2;
@@ -1081,20 +1089,241 @@ namespace Project_Manager
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(180)))), ((int)(((byte)(65)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(12, 12);
+            this.textBox2.Location = new System.Drawing.Point(13, 14);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(32, 19);
             this.textBox2.TabIndex = 1;
             // 
-            // tabPage4
+            // panel31
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(958, 763);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.panel31.Controls.Add(this.btn_draw_hours_chart);
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel31.Location = new System.Drawing.Point(3, 3);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(176, 48);
+            this.panel31.TabIndex = 3;
+            // 
+            // btn_draw_hours_chart
+            // 
+            this.btn_draw_hours_chart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_draw_hours_chart.Location = new System.Drawing.Point(1, 5);
+            this.btn_draw_hours_chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_draw_hours_chart.Name = "btn_draw_hours_chart";
+            this.btn_draw_hours_chart.Size = new System.Drawing.Size(171, 38);
+            this.btn_draw_hours_chart.TabIndex = 19;
+            this.btn_draw_hours_chart.Text = "Draw Chart";
+            this.btn_draw_hours_chart.UseVisualStyleBackColor = true;
+            this.btn_draw_hours_chart.Click += new System.EventHandler(this.btn_draw_hours_chart_Click);
+            // 
+            // panel32
+            // 
+            this.panel32.Controls.Add(this.btn_clear_hours_chart);
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel32.Location = new System.Drawing.Point(185, 3);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(170, 48);
+            this.panel32.TabIndex = 4;
+            // 
+            // btn_clear_hours_chart
+            // 
+            this.btn_clear_hours_chart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_clear_hours_chart.Location = new System.Drawing.Point(0, 5);
+            this.btn_clear_hours_chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_clear_hours_chart.Name = "btn_clear_hours_chart";
+            this.btn_clear_hours_chart.Size = new System.Drawing.Size(166, 38);
+            this.btn_clear_hours_chart.TabIndex = 20;
+            this.btn_clear_hours_chart.Text = "Clear Chart";
+            this.btn_clear_hours_chart.UseVisualStyleBackColor = true;
+            this.btn_clear_hours_chart.Click += new System.EventHandler(this.btn_clear_hours_chart_Click);
+            // 
+            // tab_weekly_income
+            // 
+            this.tab_weekly_income.Controls.Add(this.tableLayoutPanel6);
+            this.tab_weekly_income.Location = new System.Drawing.Point(4, 29);
+            this.tab_weekly_income.Name = "tab_weekly_income";
+            this.tab_weekly_income.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_weekly_income.Size = new System.Drawing.Size(958, 763);
+            this.tab_weekly_income.TabIndex = 3;
+            this.tab_weekly_income.Text = "Weekly Income";
+            this.tab_weekly_income.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.panel15, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(952, 757);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.chrt_weekly_income);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(3, 3);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(946, 691);
+            this.panel15.TabIndex = 0;
+            // 
+            // chrt_weekly_income
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chrt_weekly_income.ChartAreas.Add(chartArea2);
+            this.chrt_weekly_income.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chrt_weekly_income.Location = new System.Drawing.Point(0, 0);
+            this.chrt_weekly_income.Name = "chrt_weekly_income";
+            this.chrt_weekly_income.Size = new System.Drawing.Size(946, 691);
+            this.chrt_weekly_income.TabIndex = 0;
+            this.chrt_weekly_income.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chrt_weekly_income_MouseMove);
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 5;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.tableLayoutPanel7.Controls.Add(this.panel16, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel25, 4, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel26, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel27, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel36, 1, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 700);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(946, 54);
+            this.tableLayoutPanel7.TabIndex = 1;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.btn_weekly_income_chart_draw);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel16.Location = new System.Drawing.Point(3, 3);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(176, 48);
+            this.panel16.TabIndex = 0;
+            // 
+            // btn_weekly_income_chart_draw
+            // 
+            this.btn_weekly_income_chart_draw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_weekly_income_chart_draw.Location = new System.Drawing.Point(1, 5);
+            this.btn_weekly_income_chart_draw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_weekly_income_chart_draw.Name = "btn_weekly_income_chart_draw";
+            this.btn_weekly_income_chart_draw.Size = new System.Drawing.Size(171, 38);
+            this.btn_weekly_income_chart_draw.TabIndex = 20;
+            this.btn_weekly_income_chart_draw.Text = "Draw Chart";
+            this.btn_weekly_income_chart_draw.UseVisualStyleBackColor = true;
+            this.btn_weekly_income_chart_draw.Click += new System.EventHandler(this.btn_weekly_income_chart_draw_Click);
+            // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.label10);
+            this.panel25.Controls.Add(this.textBox4);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel25.Location = new System.Drawing.Point(737, 3);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(206, 48);
+            this.panel25.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(59, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(133, 20);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Projected Income";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(180)))), ((int)(((byte)(65)))));
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Location = new System.Drawing.Point(21, 14);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(32, 19);
+            this.textBox4.TabIndex = 3;
+            // 
+            // panel26
+            // 
+            this.panel26.Controls.Add(this.label7);
+            this.panel26.Controls.Add(this.textBox3);
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel26.Location = new System.Drawing.Point(537, 3);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(194, 48);
+            this.panel26.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(55, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 20);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Actual Income";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(140)))), ((int)(((byte)(240)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(17, 15);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(32, 19);
+            this.textBox3.TabIndex = 2;
+            // 
+            // panel27
+            // 
+            this.panel27.Controls.Add(this.btn_weekly_income_chart_save);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel27.Location = new System.Drawing.Point(361, 3);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(170, 48);
+            this.panel27.TabIndex = 3;
+            // 
+            // btn_weekly_income_chart_save
+            // 
+            this.btn_weekly_income_chart_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_weekly_income_chart_save.Location = new System.Drawing.Point(0, 5);
+            this.btn_weekly_income_chart_save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_weekly_income_chart_save.Name = "btn_weekly_income_chart_save";
+            this.btn_weekly_income_chart_save.Size = new System.Drawing.Size(166, 38);
+            this.btn_weekly_income_chart_save.TabIndex = 22;
+            this.btn_weekly_income_chart_save.Text = "Save Chart Image";
+            this.btn_weekly_income_chart_save.UseVisualStyleBackColor = true;
+            this.btn_weekly_income_chart_save.Click += new System.EventHandler(this.btn_weekly_income_chart_save_Click);
+            // 
+            // panel36
+            // 
+            this.panel36.Controls.Add(this.btn_weekly_income_chart_clear);
+            this.panel36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel36.Location = new System.Drawing.Point(185, 3);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(170, 48);
+            this.panel36.TabIndex = 4;
+            // 
+            // btn_weekly_income_chart_clear
+            // 
+            this.btn_weekly_income_chart_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_weekly_income_chart_clear.Location = new System.Drawing.Point(0, 5);
+            this.btn_weekly_income_chart_clear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_weekly_income_chart_clear.Name = "btn_weekly_income_chart_clear";
+            this.btn_weekly_income_chart_clear.Size = new System.Drawing.Size(166, 38);
+            this.btn_weekly_income_chart_clear.TabIndex = 21;
+            this.btn_weekly_income_chart_clear.Text = "Clear Chart";
+            this.btn_weekly_income_chart_clear.UseVisualStyleBackColor = true;
+            this.btn_weekly_income_chart_clear.Click += new System.EventHandler(this.btn_weekly_income_chart_clear_Click);
             // 
             // tabPage5
             // 
@@ -1120,7 +1349,6 @@ namespace Project_Manager
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.grpbx_peoples_worked_hours.ResumeLayout(false);
             this.grpbx_data_tab.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1178,9 +1406,24 @@ namespace Project_Manager
             this.panel22.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            this.panel31.ResumeLayout(false);
+            this.panel32.ResumeLayout(false);
+            this.tab_weekly_income.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chrt_weekly_income)).EndInit();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.panel27.ResumeLayout(false);
+            this.panel36.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1196,12 +1439,12 @@ namespace Project_Manager
         private System.Windows.Forms.TabPage tab_people;
         private System.Windows.Forms.DataGridView dgv_people_csv_data;
         private System.Windows.Forms.TabPage tab_people_worked_hours;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tab_weekly_income;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button btn_add_csv_column;
         private System.Windows.Forms.Button btn_add_csv_row;
-        private System.Windows.Forms.Button btn_save_csv_file;
-        private System.Windows.Forms.Button btn_open_people;
+        private System.Windows.Forms.Button btn_save_people_csv_file;
+        private System.Windows.Forms.Button btn_open_project;
         private System.Windows.Forms.GroupBox grpbx_data_tab;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel3;
@@ -1246,10 +1489,8 @@ namespace Project_Manager
         private System.Windows.Forms.Button btn_draw_hours_chart;
         private System.Windows.Forms.Button btn_clear_hours_chart;
         private System.Windows.Forms.Button btn_Save_Chart_Image;
-        private System.Windows.Forms.GroupBox grpbx_peoples_worked_hours;
         private System.Windows.Forms.TabPage tab_finance;
         private System.Windows.Forms.DataGridView dgv_finance_csv_data;
-        private System.Windows.Forms.Button btn_open_finance;
         private System.Windows.Forms.Label lbl_finance_file_in_use;
         private System.Windows.Forms.Label lbl_project_start;
         private System.Windows.Forms.Label lbl_project_end;
@@ -1276,6 +1517,26 @@ namespace Project_Manager
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Button btn_add_finance_data;
         private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chrt_weekly_income;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.Button btn_weekly_income_chart_draw;
+        private System.Windows.Forms.Button btn_weekly_income_chart_save;
+        private System.Windows.Forms.Button btn_weekly_income_chart_clear;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btn_save_finance_csv_file;
     }
 }
 

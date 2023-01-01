@@ -13,15 +13,18 @@ namespace Project_Manager
 
         private void DrawPeoplesWorkedHoursChart()
         {
-            ClearPeoplesWorkedHoursChart();
+            ClearPeoplesWorkedHoursChart(chrt_peoples_work_hours);
 
             Series projected = chrt_peoples_work_hours.Series.Add("Projected Hours");
+            projected.ChartType = SeriesChartType.Column; //Barchart from bottom up
             Series acheived = chrt_peoples_work_hours.Series.Add("Acheived Hours");
+            acheived.ChartType = SeriesChartType.Column; //Barchart from bottom up
+
             chrt_peoples_work_hours.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
             chrt_peoples_work_hours.ChartAreas[0].AxisY.MinorGrid.Enabled = false;
             chrt_peoples_work_hours.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
             chrt_peoples_work_hours.ChartAreas[0].AxisX.MinorGrid.Enabled = false;
-
+            chrt_peoples_work_hours.ChartAreas[0].AxisX.IsMarginVisible = false; //start it at the first item
 
             //get each person by ID in turn
             foreach (string id in cmbobx_update_id.Items)
@@ -50,18 +53,10 @@ namespace Project_Manager
 
         private void btn_clear_hours_chart_Click(object sender, EventArgs e)
         {
-            ClearPeoplesWorkedHoursChart();
+            ClearPeoplesWorkedHoursChart(chrt_peoples_work_hours);
         }
 
-        private void ClearPeoplesWorkedHoursChart()
-        {
-            foreach (var series in chrt_peoples_work_hours.Series)
-            {
-                series.Points.Clear();
-            }
-
-            chrt_peoples_work_hours.Series.Clear();
-        }
+        
 
         //Show the Values in a tooltip
         private void chrt_peoples_work_hours_MouseMove(object sender, MouseEventArgs e)

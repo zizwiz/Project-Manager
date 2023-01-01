@@ -84,5 +84,15 @@ namespace Project_Manager
             zoomChartArea.CursorX.IsUserSelectionEnabled = true; //adds reset button on left
             zoomChartArea.AxisX.ScaleView.SmallScrollSize = 100;
         }
+
+        private void ClearPeoplesWorkedHoursChart(Chart myChart)
+        {
+            foreach (var series in myChart.Series)
+            {
+                series.Points.Clear();
+            }
+
+            myChart.Series.Clear();
+        }
     }
 }

@@ -1,5 +1,9 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using CenteredMessagebox;
 
 namespace Project_Manager
 {
@@ -40,6 +44,43 @@ namespace Project_Manager
             // Return the values.
             return values;
         }
+
+        private void SaveCSVFile(DataGridView myDataGridView)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Title = "Save CSV Files";
+            saveFileDialog1.DefaultExt = "csv";
+            saveFileDialog1.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    var sb = new StringBuilder();
+
+                    var headers = myDataGridView.Columns.Cast<DataGridViewColumn>();
+                    sb.AppendLine(string.Join(",", headers.Select(column => column.HeaderText).ToArray()));
+
+                    foreach (DataGridViewRow row in myDataGridView.Rows)
+                    {
+                        var cells = row.Cells.Cast<DataGridViewCell>();
+                        sb.AppendLine(string.Join(",", cells.Select(cell => cell.Value).ToArray()));
+                    }
+
+                    StreamWriter file = new StreamWriter(saveFileDialog1.FileName);
+
+                    file.WriteLine(sb.ToString()); // "sb" is the StringBuilder
+                    file.Close();
+
+                }
+                catch (Exception exception)
+                {
+                    MsgBox.Show(exception.ToString(), "Save file error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+         
 
     }
 }

@@ -8,41 +8,33 @@ namespace Project_Manager
         {
             grpbx_data_tab.Visible = false;
 
+            btn_save_finance_csv_file.Visible = false;
+            btn_save_people_csv_file.Visible = false;
+
             if (tabControl1.SelectedTab == tabControl1.TabPages["tab_people"])
             {
+                btn_save_people_csv_file.Visible = true;
                 grpbx_data_tab.Visible = true;
                 grpbx_data_tab.BringToFront();
-                grpbx_peoples_worked_hours.Visible = false;
-                grpbx_peoples_worked_hours.SendToBack();
-                btn_Save_Chart_Image.Visible = false;
+                
             }
 
             if (tabControl1.SelectedTab == tabControl1.TabPages["tab_input_updates"])
             {
                 grpbx_data_tab.Visible = false;
                 grpbx_data_tab.SendToBack();
-                grpbx_peoples_worked_hours.Visible = false;
-                grpbx_peoples_worked_hours.SendToBack();
-                btn_Save_Chart_Image.Visible = false;
+               
             }
 
 
-            if (tabControl1.SelectedTab == tabControl1.TabPages["tab_people_worked_hours"])
+            if (tabControl1.SelectedTab == tabControl1.TabPages["tab_finance"])
             {
+                btn_save_finance_csv_file.Visible = true;
                 grpbx_data_tab.Visible = false;
                 grpbx_data_tab.SendToBack();
-                grpbx_peoples_worked_hours.Visible = true;
-                grpbx_peoples_worked_hours.BringToFront();
-                btn_Save_Chart_Image.Visible = true;
+               
             }
 
         }
-
-
-
-
-
-
-
     }
 }

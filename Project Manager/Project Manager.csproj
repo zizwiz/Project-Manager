@@ -61,6 +61,9 @@
     <Compile Include="graphs\PeoplesWorkedHours.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="graphs\WeeklyIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="popups\AdditionalNames.cs">
       <SubType>Form</SubType>
     </Compile>
