@@ -24,10 +24,20 @@ namespace Project_Manager
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            //save csv files
-            // SaveCSVFile(dgv_finance_csv_data);
-            // SaveCSVFile(dgv_people_csv_data);
+            // if we have CSV data in the dialogs then we must ask to save before we close
 
+            if (dgv_finance_csv_data.RowCount > 0 && dgv_people_csv_data.RowCount > 0)
+            {
+                if (MsgBox.Show("Do you want to save the CSV data?", "Save Data?",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //save csv files
+                    SaveCSVFile(dgv_finance_csv_data, "finance");
+                    SaveCSVFile(dgv_people_csv_data, "people");
+                }
+            }
+
+            //All good so now close the app
             Close();
         }
 
@@ -52,9 +62,16 @@ namespace Project_Manager
                 lbl_update_file_in_use.Text += OpenFileName;
                 DataGridView myDataGridView = dgv_people_csv_data;
 
+                //Clear all previous information from all DataGridViews
+                ClearCSV(dgv_people_csv_data);
+                ClearCSV(dgv_finance_csv_data);
+                ClearChart(chrt_peoples_work_hours);
+                ClearChart(chrt_weekly_income);
+
+
                 //loop twice to get both the CSV files into their respective DataGridViews.
                 // CSV for People and CSV for Finance.
-                
+
                 for (int i = 0; i < 2; i++)
                 {
                     try

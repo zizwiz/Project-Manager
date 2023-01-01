@@ -8,7 +8,7 @@ namespace Project_Manager
     {
         private void btn_weekly_income_chart_draw_Click(object sender, EventArgs e)
         {
-            ClearPeoplesWorkedHoursChart(chrt_weekly_income);
+            ClearChart(chrt_weekly_income);
 
             Series WeeklyIncome = chrt_weekly_income.Series.Add("Weekly Income");
             WeeklyIncome.ChartType = SeriesChartType.FastLine;
@@ -60,7 +60,7 @@ namespace Project_Manager
 
         private void btn_weekly_income_chart_clear_Click(object sender, EventArgs e)
         {
-            ClearPeoplesWorkedHoursChart(chrt_weekly_income);
+            ClearChart(chrt_weekly_income);
         }
 
         private void btn_weekly_income_chart_save_Click(object sender, EventArgs e)

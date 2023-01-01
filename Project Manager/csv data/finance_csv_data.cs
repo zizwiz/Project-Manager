@@ -70,7 +70,7 @@ namespace Project_Manager
 
         private void btn_save_finance_csv_file_Click(object sender, EventArgs e)
         {
-            SaveCSVFile(dgv_finance_csv_data);
+            SaveCSVFile(dgv_finance_csv_data, "finance");
         }
     }
 }

@@ -45,10 +45,24 @@ namespace Project_Manager
             return values;
         }
 
-        private void SaveCSVFile(DataGridView myDataGridView)
+        private void SaveCSVFile(DataGridView myDataGridView, string myType)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Title = "Save CSV Files";
+
+            // choose correct heading for the save files dialog
+            if (myType == "finance")
+            {
+                saveFileDialog1.Title = "Enter Name to save Finance CSV Files";
+            }
+            else if (myType == "people")
+            {
+                saveFileDialog1.Title = "Enter Name to save People CSV Files";
+            }
+            else
+            {
+                saveFileDialog1.Title = "Save CSV Files";
+            }
+            
             saveFileDialog1.DefaultExt = "csv";
             saveFileDialog1.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 1;
@@ -80,7 +94,12 @@ namespace Project_Manager
                 }
             }
         }
-         
+
+        private void ClearCSV(DataGridView myDataGridView)
+        {
+           myDataGridView.Rows.Clear();
+            myDataGridView.Refresh();
+        }
 
     }
 }

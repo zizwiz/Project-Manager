@@ -13,7 +13,7 @@ namespace Project_Manager
 
         private void DrawPeoplesWorkedHoursChart()
         {
-            ClearPeoplesWorkedHoursChart(chrt_peoples_work_hours);
+            ClearChart(chrt_peoples_work_hours);
 
             Series projected = chrt_peoples_work_hours.Series.Add("Projected Hours");
             projected.ChartType = SeriesChartType.Column; //Barchart from bottom up
@@ -53,7 +53,7 @@ namespace Project_Manager
 
         private void btn_clear_hours_chart_Click(object sender, EventArgs e)
         {
-            ClearPeoplesWorkedHoursChart(chrt_peoples_work_hours);
+            ClearChart(chrt_peoples_work_hours);
         }
 
         

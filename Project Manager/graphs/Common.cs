@@ -85,7 +85,7 @@ namespace Project_Manager
             zoomChartArea.AxisX.ScaleView.SmallScrollSize = 100;
         }
 
-        private void ClearPeoplesWorkedHoursChart(Chart myChart)
+        private void ClearChart(Chart myChart)
         {
             foreach (var series in myChart.Series)
             {
