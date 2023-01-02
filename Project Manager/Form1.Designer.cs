@@ -31,6 +31,7 @@ namespace Project_Manager
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,9 +39,9 @@ namespace Project_Manager
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.panel38 = new System.Windows.Forms.Panel();
-            this.btn_save_people_csv_file = new System.Windows.Forms.Button();
             this.btn_open_project = new System.Windows.Forms.Button();
             this.btn_save_finance_csv_file = new System.Windows.Forms.Button();
+            this.btn_save_people_csv_file = new System.Windows.Forms.Button();
             this.panel39 = new System.Windows.Forms.Panel();
             this.grpbx_data_tab = new System.Windows.Forms.GroupBox();
             this.btn_add_csv_column = new System.Windows.Forms.Button();
@@ -141,7 +142,27 @@ namespace Project_Manager
             this.btn_weekly_income_chart_save = new System.Windows.Forms.Button();
             this.panel36 = new System.Windows.Forms.Panel();
             this.btn_weekly_income_chart_clear = new System.Windows.Forms.Button();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tab_available_spend = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.chrt_available_spend = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.btn_available_spend_chart_draw = new System.Windows.Forms.Button();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.btn_available_spend_chart_clear = new System.Windows.Forms.Button();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.btn_available_spend_chart_save = new System.Windows.Forms.Button();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.panel49 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -202,6 +223,18 @@ namespace Project_Manager
             this.panel26.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panel36.SuspendLayout();
+            this.tab_available_spend.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.panel40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chrt_available_spend)).BeginInit();
+            this.panel41.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.panel44.SuspendLayout();
+            this.panel45.SuspendLayout();
+            this.panel46.SuspendLayout();
+            this.panel47.SuspendLayout();
+            this.panel48.SuspendLayout();
+            this.panel49.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -278,18 +311,6 @@ namespace Project_Manager
             this.panel38.Size = new System.Drawing.Size(132, 114);
             this.panel38.TabIndex = 0;
             // 
-            // btn_save_people_csv_file
-            // 
-            this.btn_save_people_csv_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_save_people_csv_file.Location = new System.Drawing.Point(10, 18);
-            this.btn_save_people_csv_file.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_save_people_csv_file.Name = "btn_save_people_csv_file";
-            this.btn_save_people_csv_file.Size = new System.Drawing.Size(112, 79);
-            this.btn_save_people_csv_file.TabIndex = 8;
-            this.btn_save_people_csv_file.Text = "Save People CSV";
-            this.btn_save_people_csv_file.UseVisualStyleBackColor = true;
-            this.btn_save_people_csv_file.Click += new System.EventHandler(this.btn_save_people_csv_file_Click);
-            // 
             // btn_open_project
             // 
             this.btn_open_project.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -313,6 +334,18 @@ namespace Project_Manager
             this.btn_save_finance_csv_file.Text = "Save Finance CSV";
             this.btn_save_finance_csv_file.UseVisualStyleBackColor = true;
             this.btn_save_finance_csv_file.Click += new System.EventHandler(this.btn_save_finance_csv_file_Click);
+            // 
+            // btn_save_people_csv_file
+            // 
+            this.btn_save_people_csv_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_save_people_csv_file.Location = new System.Drawing.Point(10, 18);
+            this.btn_save_people_csv_file.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_save_people_csv_file.Name = "btn_save_people_csv_file";
+            this.btn_save_people_csv_file.Size = new System.Drawing.Size(112, 79);
+            this.btn_save_people_csv_file.TabIndex = 8;
+            this.btn_save_people_csv_file.Text = "Save People CSV";
+            this.btn_save_people_csv_file.UseVisualStyleBackColor = true;
+            this.btn_save_people_csv_file.Click += new System.EventHandler(this.btn_save_people_csv_file_Click);
             // 
             // panel39
             // 
@@ -392,7 +425,7 @@ namespace Project_Manager
             this.tabControl1.Controls.Add(this.tab_finance);
             this.tabControl1.Controls.Add(this.tab_people_worked_hours);
             this.tabControl1.Controls.Add(this.tab_weekly_income);
-            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tab_available_spend);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -1041,7 +1074,7 @@ namespace Project_Manager
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.tableLayoutPanel5.Controls.Add(this.panel23, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel24, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel28, 4, 0);
@@ -1059,18 +1092,18 @@ namespace Project_Manager
             // 
             this.panel23.Controls.Add(this.btn_Save_Chart_Image);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(360, 3);
+            this.panel23.Location = new System.Drawing.Point(355, 3);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(170, 48);
+            this.panel23.Size = new System.Drawing.Size(167, 48);
             this.panel23.TabIndex = 0;
             // 
             // btn_Save_Chart_Image
             // 
             this.btn_Save_Chart_Image.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Save_Chart_Image.Location = new System.Drawing.Point(0, 5);
+            this.btn_Save_Chart_Image.Location = new System.Drawing.Point(4, 5);
             this.btn_Save_Chart_Image.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Save_Chart_Image.Name = "btn_Save_Chart_Image";
-            this.btn_Save_Chart_Image.Size = new System.Drawing.Size(166, 38);
+            this.btn_Save_Chart_Image.Size = new System.Drawing.Size(159, 38);
             this.btn_Save_Chart_Image.TabIndex = 21;
             this.btn_Save_Chart_Image.Text = "Save Chart Image";
             this.btn_Save_Chart_Image.UseVisualStyleBackColor = true;
@@ -1081,7 +1114,7 @@ namespace Project_Manager
             this.panel24.Controls.Add(this.label5);
             this.panel24.Controls.Add(this.textBox1);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel24.Location = new System.Drawing.Point(536, 3);
+            this.panel24.Location = new System.Drawing.Point(528, 3);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(194, 48);
             this.panel24.TabIndex = 1;
@@ -1089,7 +1122,7 @@ namespace Project_Manager
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 14);
+            this.label5.Location = new System.Drawing.Point(55, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 20);
             this.label5.TabIndex = 1;
@@ -1099,7 +1132,7 @@ namespace Project_Manager
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(140)))), ((int)(((byte)(240)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(20, 15);
+            this.textBox1.Location = new System.Drawing.Point(17, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(32, 19);
             this.textBox1.TabIndex = 0;
@@ -1109,15 +1142,15 @@ namespace Project_Manager
             this.panel28.Controls.Add(this.label6);
             this.panel28.Controls.Add(this.textBox2);
             this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel28.Location = new System.Drawing.Point(736, 3);
+            this.panel28.Location = new System.Drawing.Point(728, 3);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(207, 48);
+            this.panel28.Size = new System.Drawing.Size(215, 48);
             this.panel28.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 14);
+            this.label6.Location = new System.Drawing.Point(66, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 20);
             this.label6.TabIndex = 2;
@@ -1127,7 +1160,7 @@ namespace Project_Manager
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(180)))), ((int)(((byte)(65)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(13, 14);
+            this.textBox2.Location = new System.Drawing.Point(28, 14);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(32, 19);
             this.textBox2.TabIndex = 1;
@@ -1138,16 +1171,16 @@ namespace Project_Manager
             this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel31.Location = new System.Drawing.Point(3, 3);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(175, 48);
+            this.panel31.Size = new System.Drawing.Size(173, 48);
             this.panel31.TabIndex = 3;
             // 
             // btn_draw_hours_chart
             // 
             this.btn_draw_hours_chart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_draw_hours_chart.Location = new System.Drawing.Point(0, 5);
+            this.btn_draw_hours_chart.Location = new System.Drawing.Point(18, 5);
             this.btn_draw_hours_chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_draw_hours_chart.Name = "btn_draw_hours_chart";
-            this.btn_draw_hours_chart.Size = new System.Drawing.Size(171, 38);
+            this.btn_draw_hours_chart.Size = new System.Drawing.Size(136, 38);
             this.btn_draw_hours_chart.TabIndex = 19;
             this.btn_draw_hours_chart.Text = "Draw Chart";
             this.btn_draw_hours_chart.UseVisualStyleBackColor = true;
@@ -1157,18 +1190,18 @@ namespace Project_Manager
             // 
             this.panel32.Controls.Add(this.btn_clear_hours_chart);
             this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel32.Location = new System.Drawing.Point(184, 3);
+            this.panel32.Location = new System.Drawing.Point(182, 3);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(170, 48);
+            this.panel32.Size = new System.Drawing.Size(167, 48);
             this.panel32.TabIndex = 4;
             // 
             // btn_clear_hours_chart
             // 
             this.btn_clear_hours_chart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_clear_hours_chart.Location = new System.Drawing.Point(0, 5);
+            this.btn_clear_hours_chart.Location = new System.Drawing.Point(21, 5);
             this.btn_clear_hours_chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_clear_hours_chart.Name = "btn_clear_hours_chart";
-            this.btn_clear_hours_chart.Size = new System.Drawing.Size(166, 38);
+            this.btn_clear_hours_chart.Size = new System.Drawing.Size(124, 38);
             this.btn_clear_hours_chart.TabIndex = 20;
             this.btn_clear_hours_chart.Text = "Clear Chart";
             this.btn_clear_hours_chart.UseVisualStyleBackColor = true;
@@ -1230,7 +1263,7 @@ namespace Project_Manager
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.tableLayoutPanel7.Controls.Add(this.panel16, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel25, 4, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel26, 3, 0);
@@ -1250,16 +1283,16 @@ namespace Project_Manager
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(3, 3);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(175, 48);
+            this.panel16.Size = new System.Drawing.Size(173, 48);
             this.panel16.TabIndex = 0;
             // 
             // btn_weekly_income_chart_draw
             // 
             this.btn_weekly_income_chart_draw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_weekly_income_chart_draw.Location = new System.Drawing.Point(0, 5);
+            this.btn_weekly_income_chart_draw.Location = new System.Drawing.Point(28, 5);
             this.btn_weekly_income_chart_draw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_weekly_income_chart_draw.Name = "btn_weekly_income_chart_draw";
-            this.btn_weekly_income_chart_draw.Size = new System.Drawing.Size(171, 38);
+            this.btn_weekly_income_chart_draw.Size = new System.Drawing.Size(129, 38);
             this.btn_weekly_income_chart_draw.TabIndex = 20;
             this.btn_weekly_income_chart_draw.Text = "Draw Chart";
             this.btn_weekly_income_chart_draw.UseVisualStyleBackColor = true;
@@ -1270,15 +1303,15 @@ namespace Project_Manager
             this.panel25.Controls.Add(this.label10);
             this.panel25.Controls.Add(this.textBox4);
             this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel25.Location = new System.Drawing.Point(736, 3);
+            this.panel25.Location = new System.Drawing.Point(728, 3);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(207, 48);
+            this.panel25.Size = new System.Drawing.Size(215, 48);
             this.panel25.TabIndex = 1;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(59, 14);
+            this.label10.Location = new System.Drawing.Point(60, 14);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(133, 20);
             this.label10.TabIndex = 4;
@@ -1288,7 +1321,7 @@ namespace Project_Manager
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(180)))), ((int)(((byte)(65)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(21, 14);
+            this.textBox4.Location = new System.Drawing.Point(22, 14);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(32, 19);
             this.textBox4.TabIndex = 3;
@@ -1298,7 +1331,7 @@ namespace Project_Manager
             this.panel26.Controls.Add(this.label7);
             this.panel26.Controls.Add(this.textBox3);
             this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel26.Location = new System.Drawing.Point(536, 3);
+            this.panel26.Location = new System.Drawing.Point(528, 3);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(194, 48);
             this.panel26.TabIndex = 2;
@@ -1306,7 +1339,7 @@ namespace Project_Manager
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(55, 14);
+            this.label7.Location = new System.Drawing.Point(61, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 20);
             this.label7.TabIndex = 3;
@@ -1316,7 +1349,7 @@ namespace Project_Manager
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(140)))), ((int)(((byte)(240)))));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(17, 15);
+            this.textBox3.Location = new System.Drawing.Point(23, 15);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(32, 19);
             this.textBox3.TabIndex = 2;
@@ -1325,18 +1358,18 @@ namespace Project_Manager
             // 
             this.panel27.Controls.Add(this.btn_weekly_income_chart_save);
             this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel27.Location = new System.Drawing.Point(360, 3);
+            this.panel27.Location = new System.Drawing.Point(355, 3);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(170, 48);
+            this.panel27.Size = new System.Drawing.Size(167, 48);
             this.panel27.TabIndex = 3;
             // 
             // btn_weekly_income_chart_save
             // 
             this.btn_weekly_income_chart_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_weekly_income_chart_save.Location = new System.Drawing.Point(0, 5);
+            this.btn_weekly_income_chart_save.Location = new System.Drawing.Point(4, 5);
             this.btn_weekly_income_chart_save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_weekly_income_chart_save.Name = "btn_weekly_income_chart_save";
-            this.btn_weekly_income_chart_save.Size = new System.Drawing.Size(166, 38);
+            this.btn_weekly_income_chart_save.Size = new System.Drawing.Size(159, 38);
             this.btn_weekly_income_chart_save.TabIndex = 22;
             this.btn_weekly_income_chart_save.Text = "Save Chart Image";
             this.btn_weekly_income_chart_save.UseVisualStyleBackColor = true;
@@ -1346,32 +1379,248 @@ namespace Project_Manager
             // 
             this.panel36.Controls.Add(this.btn_weekly_income_chart_clear);
             this.panel36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel36.Location = new System.Drawing.Point(184, 3);
+            this.panel36.Location = new System.Drawing.Point(182, 3);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(170, 48);
+            this.panel36.Size = new System.Drawing.Size(167, 48);
             this.panel36.TabIndex = 4;
             // 
             // btn_weekly_income_chart_clear
             // 
             this.btn_weekly_income_chart_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_weekly_income_chart_clear.Location = new System.Drawing.Point(0, 5);
+            this.btn_weekly_income_chart_clear.Location = new System.Drawing.Point(21, 5);
             this.btn_weekly_income_chart_clear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_weekly_income_chart_clear.Name = "btn_weekly_income_chart_clear";
-            this.btn_weekly_income_chart_clear.Size = new System.Drawing.Size(166, 38);
+            this.btn_weekly_income_chart_clear.Size = new System.Drawing.Size(130, 38);
             this.btn_weekly_income_chart_clear.TabIndex = 21;
             this.btn_weekly_income_chart_clear.Text = "Clear Chart";
             this.btn_weekly_income_chart_clear.UseVisualStyleBackColor = true;
             this.btn_weekly_income_chart_clear.Click += new System.EventHandler(this.btn_weekly_income_chart_clear_Click);
             // 
-            // tabPage5
+            // tab_available_spend
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(958, 763);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tab_available_spend.Controls.Add(this.tableLayoutPanel9);
+            this.tab_available_spend.Location = new System.Drawing.Point(4, 29);
+            this.tab_available_spend.Name = "tab_available_spend";
+            this.tab_available_spend.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_available_spend.Size = new System.Drawing.Size(958, 763);
+            this.tab_available_spend.TabIndex = 4;
+            this.tab_available_spend.Text = "Available Spend";
+            this.tab_available_spend.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.panel40, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.panel41, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(952, 757);
+            this.tableLayoutPanel9.TabIndex = 0;
+            // 
+            // panel40
+            // 
+            this.panel40.Controls.Add(this.chrt_available_spend);
+            this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel40.Location = new System.Drawing.Point(3, 3);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(946, 691);
+            this.panel40.TabIndex = 0;
+            // 
+            // chrt_available_spend
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chrt_available_spend.ChartAreas.Add(chartArea3);
+            this.chrt_available_spend.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chrt_available_spend.Location = new System.Drawing.Point(0, 0);
+            this.chrt_available_spend.Name = "chrt_available_spend";
+            this.chrt_available_spend.Size = new System.Drawing.Size(946, 691);
+            this.chrt_available_spend.TabIndex = 0;
+            this.chrt_available_spend.Text = "chart1";
+            this.chrt_available_spend.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chrt_available_spend_MouseMove);
+            // 
+            // panel41
+            // 
+            this.panel41.Controls.Add(this.tableLayoutPanel10);
+            this.panel41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel41.Location = new System.Drawing.Point(3, 700);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(946, 54);
+            this.panel41.TabIndex = 1;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 6;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel10.Controls.Add(this.panel44, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel45, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel46, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel47, 3, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel48, 4, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel49, 5, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(946, 54);
+            this.tableLayoutPanel10.TabIndex = 0;
+            // 
+            // panel44
+            // 
+            this.panel44.Controls.Add(this.btn_available_spend_chart_draw);
+            this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel44.Location = new System.Drawing.Point(3, 3);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(138, 48);
+            this.panel44.TabIndex = 0;
+            // 
+            // btn_available_spend_chart_draw
+            // 
+            this.btn_available_spend_chart_draw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_available_spend_chart_draw.Location = new System.Drawing.Point(10, 5);
+            this.btn_available_spend_chart_draw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_available_spend_chart_draw.Name = "btn_available_spend_chart_draw";
+            this.btn_available_spend_chart_draw.Size = new System.Drawing.Size(119, 38);
+            this.btn_available_spend_chart_draw.TabIndex = 21;
+            this.btn_available_spend_chart_draw.Text = "Draw Chart";
+            this.btn_available_spend_chart_draw.UseVisualStyleBackColor = true;
+            this.btn_available_spend_chart_draw.Click += new System.EventHandler(this.btn_available_spend_chart_draw_Click);
+            // 
+            // panel45
+            // 
+            this.panel45.Controls.Add(this.btn_available_spend_chart_clear);
+            this.panel45.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel45.Location = new System.Drawing.Point(147, 3);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(134, 48);
+            this.panel45.TabIndex = 1;
+            // 
+            // btn_available_spend_chart_clear
+            // 
+            this.btn_available_spend_chart_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_available_spend_chart_clear.Location = new System.Drawing.Point(17, 5);
+            this.btn_available_spend_chart_clear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_available_spend_chart_clear.Name = "btn_available_spend_chart_clear";
+            this.btn_available_spend_chart_clear.Size = new System.Drawing.Size(101, 38);
+            this.btn_available_spend_chart_clear.TabIndex = 22;
+            this.btn_available_spend_chart_clear.Text = "Clear Chart";
+            this.btn_available_spend_chart_clear.UseVisualStyleBackColor = true;
+            this.btn_available_spend_chart_clear.Click += new System.EventHandler(this.btn_available_spend_chart_clear_Click);
+            // 
+            // panel46
+            // 
+            this.panel46.Controls.Add(this.btn_available_spend_chart_save);
+            this.panel46.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel46.Location = new System.Drawing.Point(287, 3);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(134, 48);
+            this.panel46.TabIndex = 2;
+            // 
+            // btn_available_spend_chart_save
+            // 
+            this.btn_available_spend_chart_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_available_spend_chart_save.Location = new System.Drawing.Point(11, 5);
+            this.btn_available_spend_chart_save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_available_spend_chart_save.Name = "btn_available_spend_chart_save";
+            this.btn_available_spend_chart_save.Size = new System.Drawing.Size(112, 38);
+            this.btn_available_spend_chart_save.TabIndex = 23;
+            this.btn_available_spend_chart_save.Text = "Save Image";
+            this.btn_available_spend_chart_save.UseVisualStyleBackColor = true;
+            this.btn_available_spend_chart_save.Click += new System.EventHandler(this.btn_available_spend_chart_save_Click);
+            // 
+            // panel47
+            // 
+            this.panel47.Controls.Add(this.label12);
+            this.panel47.Controls.Add(this.textBox5);
+            this.panel47.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel47.Location = new System.Drawing.Point(427, 3);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(194, 48);
+            this.panel47.TabIndex = 3;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(46, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(141, 20);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Available to Spend";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(140)))), ((int)(((byte)(240)))));
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Location = new System.Drawing.Point(8, 14);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(32, 19);
+            this.textBox5.TabIndex = 4;
+            // 
+            // panel48
+            // 
+            this.panel48.Controls.Add(this.label11);
+            this.panel48.Controls.Add(this.textBox6);
+            this.panel48.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel48.Location = new System.Drawing.Point(627, 3);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(164, 48);
+            this.panel48.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(49, 14);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(105, 20);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Actual Spend";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(180)))), ((int)(((byte)(65)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Location = new System.Drawing.Point(11, 14);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(32, 19);
+            this.textBox6.TabIndex = 5;
+            // 
+            // panel49
+            // 
+            this.panel49.Controls.Add(this.label13);
+            this.panel49.Controls.Add(this.textBox7);
+            this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel49.Location = new System.Drawing.Point(797, 3);
+            this.panel49.Name = "panel49";
+            this.panel49.Size = new System.Drawing.Size(146, 48);
+            this.panel49.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(59, 14);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(68, 20);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Average";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(159)))), ((int)(((byte)(132)))));
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Location = new System.Drawing.Point(21, 14);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(32, 19);
+            this.textBox7.TabIndex = 7;
             // 
             // Form1
             // 
@@ -1465,6 +1714,21 @@ namespace Project_Manager
             this.panel26.PerformLayout();
             this.panel27.ResumeLayout(false);
             this.panel36.ResumeLayout(false);
+            this.tab_available_spend.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.panel40.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chrt_available_spend)).EndInit();
+            this.panel41.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.panel44.ResumeLayout(false);
+            this.panel45.ResumeLayout(false);
+            this.panel46.ResumeLayout(false);
+            this.panel47.ResumeLayout(false);
+            this.panel47.PerformLayout();
+            this.panel48.ResumeLayout(false);
+            this.panel48.PerformLayout();
+            this.panel49.ResumeLayout(false);
+            this.panel49.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1481,7 +1745,7 @@ namespace Project_Manager
         private System.Windows.Forms.DataGridView dgv_people_csv_data;
         private System.Windows.Forms.TabPage tab_people_worked_hours;
         private System.Windows.Forms.TabPage tab_weekly_income;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tab_available_spend;
         private System.Windows.Forms.Button btn_add_csv_column;
         private System.Windows.Forms.Button btn_add_csv_row;
         private System.Windows.Forms.Button btn_save_people_csv_file;
@@ -1581,6 +1845,26 @@ namespace Project_Manager
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chrt_available_spend;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.Button btn_available_spend_chart_draw;
+        private System.Windows.Forms.Panel panel45;
+        private System.Windows.Forms.Button btn_available_spend_chart_clear;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.Button btn_available_spend_chart_save;
+        private System.Windows.Forms.Panel panel47;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Panel panel48;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Panel panel49;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }
 

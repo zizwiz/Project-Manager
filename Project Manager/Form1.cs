@@ -108,7 +108,7 @@ namespace Project_Manager
                             //col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                             col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                        if (i == 0)
+                        if (i == 0) //People CSV
                         {
                             // Add the data.
                             for (int r = 1; r < values.GetUpperBound(0) + 1; r++)
@@ -121,7 +121,7 @@ namespace Project_Manager
                                 }
                             }
                         }
-                        else if (i == 1)
+                        else if (i == 1) //Finance CSV
                         {
                             // Add the data.
                             lbl_project_start.Text += dgv_finance_csv_data.Rows[0].Cells[3].Value.ToString();
@@ -179,5 +179,6 @@ namespace Project_Manager
               
             }
         }
+
     }
 }

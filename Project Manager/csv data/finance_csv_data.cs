@@ -62,6 +62,11 @@ namespace Project_Manager
                     (double.Parse(dgv_finance_csv_data.Rows[num_rows - 1].Cells[8].Value.ToString()) -
                      double.Parse(txtbx_project_income.Text)).ToString();
 
+                dgv_finance_csv_data.Rows[num_rows].Cells[9].Value =
+                    int.Parse(dgv_finance_csv_data.Rows[num_rows].Cells[8].Value.ToString()) /
+                    int.Parse(dgv_finance_csv_data.Rows[num_rows].Cells[5].Value.ToString());
+
+
                 //Sort by date
                 dgv_finance_csv_data.Sort(dgv_finance_csv_data.Columns[2], ListSortDirection.Descending);
             }
